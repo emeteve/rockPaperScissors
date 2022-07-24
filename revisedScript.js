@@ -46,6 +46,12 @@ function rockPaperScissors(selection, computerChoice) {
 }
 
 const buttons = document.querySelectorAll('button');
+const player = document.querySelector('#playerScore')
+const computer = document.querySelector('#computerScore')
+const roundResult = document.querySelector('#result');
+const gameResult = document.querySelector('#gameResult')
+player.textContent = 'Player Score: ' + playerScore;
+computer.textContent = 'Computer Score:' + computerScore;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -53,13 +59,16 @@ buttons.forEach((button) => {
         computerPlay();
         rockPaperScissors();
         
-        console.log(result);
-        console.log(`Player Score: ${playerScore}`);
-        console.log(`Computer Score: ${computerScore}`);
-        if (computerScore === 3) {
-            console.log('You Lost Rock Paper Scissors!');
-        } else if (playerScore === 3) {
-            console.log('You Won Rock Paper Scissors!');
+        roundResult.textContent = result;
+
+        player.textContent = 'Player Score: ' + playerScore;
+        computer.textContent = 'Computer Score:' + computerScore;
+
+        if (computerScore === 5) {
+            gameResult.textContent = 'You Lost Rock Paper Scissors!';
+        } else if (playerScore === 5) {
+            gameResult.textContent = 'You Won Rock Paper Scissors!';
         }
     });
 });
+
