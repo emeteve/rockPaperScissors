@@ -11,8 +11,8 @@ body {
 }
 
 button {
-    height: 100px;
-    width: 175px;
+    height: 175px;
+    width: 225px;
 }
 
 .header {
@@ -20,6 +20,11 @@ button {
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    text-decoration: underline;
 }
 
 .blahblah {
@@ -31,4 +36,26 @@ button {
 
 #gameResult {
     font-weight: bold;
+    font-size: 35px;
 }
+
+#playerScore,
+#computerScore {
+    font-size: 30px;
+}
+
+#Rock,
+#Paper,
+#Scissor {
+    background-color: plum;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 8px inset blueviolet;
+}
+
+#result {
+    font-size: 30px;
+    font-style: italic;
+}
+

@@ -51,10 +51,17 @@ const computer = document.querySelector('#computerScore')
 const roundResult = document.querySelector('#result');
 const gameResult = document.querySelector('#gameResult')
 player.textContent = 'Player Score: ' + playerScore;
-computer.textContent = 'Computer Score:' + computerScore;
+computer.textContent = 'Computer Score: ' + computerScore;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        if (computerScore === 5) {
+            gameResult.textContent = 'You Lost Rock Paper Scissors!';
+            return;
+        } else if (playerScore === 5) {
+            gameResult.textContent = 'You Won Rock Paper Scissors!';
+            return;
+        }
         playerSelect = button.id;
         computerPlay();
         rockPaperScissors();
@@ -63,12 +70,6 @@ buttons.forEach((button) => {
 
         player.textContent = 'Player Score: ' + playerScore;
         computer.textContent = 'Computer Score:' + computerScore;
-
-        if (computerScore === 5) {
-            gameResult.textContent = 'You Lost Rock Paper Scissors!';
-        } else if (playerScore === 5) {
-            gameResult.textContent = 'You Won Rock Paper Scissors!';
-        }
     });
 });
 
