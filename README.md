@@ -1,5 +1,6 @@
-# rockPaperScissors
+# Rock Paper Scissors
 Game of Rock Paper Scissors against a random computer generated option following [The Odin Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors).
+
 **GAME LINK**: [Rock-Paper-Scissors](https://emeteve.github.io/rockPaperScissors/)
 
 ## Reflection
